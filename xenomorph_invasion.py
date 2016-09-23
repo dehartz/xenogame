@@ -70,10 +70,10 @@ def journey_1():
     """
     answer = raw_input("> ")
     while True:
-        if answer contains "1":
+        if "1" in answer:
             morale += 1
             journey_2()
-        elif answer contains "2":
+        elif "2" in answer:
             morale -= 1
             journey_2()
         else:

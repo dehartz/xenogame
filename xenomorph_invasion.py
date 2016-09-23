@@ -63,7 +63,7 @@ def journey_1():
     It worked! You hear the cries of pain and the gernade shrapnel rips through
     their chitinous exoskelton."""
     print "\nAlright Marines, we are LEAVING!"
-    print """\n\nYou and your team head down the hallway.  \"Hey\" Sgt.Sansa said, jogging up next to me.
+    print """\n\nYou and your team head down the hallway.  \"Hey\" Sgt.Sansa said, jogging up next to you.
     \ndo you think we're gonna make it out of here?"
     1. Yes, don't worry.  I'll think of something.
     2. Honestly? Don't hold your breath, We'll be dead inside the hour.
@@ -72,16 +72,19 @@ def journey_1():
     while True:
         if "1" in answer:
             morale += 1
+            print "Sansa smiles at you, she looks reassured.\n"
             journey_2()
         elif "2" in answer:
             morale -= 1
+            print "Sansa looks at you for a half second longer, then looks down at her,"
+            print "feet and walks ahead."
             journey_2()
         else:
             print "Answer the question, stupid."
 
 def journey_2()
-            
-    
+
+
 
 def dead(why):
     print why, "Oh well!"

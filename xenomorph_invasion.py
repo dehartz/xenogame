@@ -82,7 +82,9 @@ def journey_1():
         else:
             print "Answer the question, stupid."
 
-def journey_2()
+def journey_2():
+    print "This is where journey 2 happens"
+    exit(0)
 
 
 

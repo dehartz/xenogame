@@ -148,6 +148,7 @@ def continue_game2():
 
 def door():
     print "This is where door will go"
+    print "Change example"
     exit(0)
 
 

@@ -43,7 +43,7 @@ def start():
                 leading out of the room you are in.  You decide to toss a gernade
                 in there just in case.
                 """
-                journey()
+                journey_1()
         elif decision == "2":
             print insults[k]
         elif decision == "3":

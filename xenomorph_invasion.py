@@ -6,7 +6,7 @@ from sys import exit
 print "You are about to initialize into XENOMORPH INVASION."
 
 name = raw_input("What is your name? \n > ")
-morale = 0
+
 def start():
     print " You are Major %s" % name
     print """
@@ -57,31 +57,11 @@ def start():
             print "No comprendo homeslice."
 
 
-def journey_1():
-    prompt
+def journey():
     print """
     It worked! You hear the cries of pain and the gernade shrapnel rips through
     their chitinous exoskelton."""
-    print "\nAlright Marines, we are LEAVING!"
-    print """\n\nYou and your team head down the hallway.  \"Hey\" Sgt.Sansa said, jogging up next to me.
-    \ndo you think we're gonna make it out of here?"
-    1. Yes, don't worry.  I'll think of something.
-    2. Honestly? Don't hold your breath, We'll be dead inside the hour.
-    """
-    answer = raw_input("> ")
-    while True:
-        if "1" in answer:
-            morale += 1
-            journey_2()
-        elif "2" in answer:
-            morale -= 1
-            journey_2()
-        else:
-            print "Answer the question, stupid."
-
-def journey_2()
-            
-    
+    exit(0)
 
 def dead(why):
     print why, "Oh well!"

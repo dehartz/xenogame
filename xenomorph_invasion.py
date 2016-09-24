@@ -121,7 +121,7 @@ def journey_2():
             morale_2 += 1
             print """
             \"Guys, I know everyone is tired.  I am too.  Let's try and work
-            together to get out of here.  We need to be working together as a team\"
+            together to get out of here.  We need to be working as as a team\"
             You see Xanarra relax slightly, some of the tension bleeding out of her.
             """
             continue_game2()

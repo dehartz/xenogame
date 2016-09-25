@@ -22,7 +22,6 @@ def start():
     members = ["Pvt.Williams","Sgt.Sansa","Admiral Xanarra"]
     insults = ["Just shut up Private.","Sgt, please shut up.", "Admiral Please remain quiet."]
     k = 0
-    j = k
 
     while True:
 
@@ -62,7 +61,7 @@ def journey_1():
     It worked! You hear the cries of pain and the gernade shrapnel rips through
     their chitinous exoskelton."""
     print "\nAlright Marines, we are LEAVING!"
-    print """\n\nYou and your team head down the hallway.  \"Hey\" Sgt.Sansa said, jogging up next to you.
+    print """\n\nYou and your team head down the hallway.  \"Hey\" Sgt.Sansa says, jogging up next to you.
     \ndo you think we're gonna make it out of here?"
     1. Yes, don't worry.  I'll think of something.
     2. Honestly? Don't hold your breath, We'll be dead inside the hour.

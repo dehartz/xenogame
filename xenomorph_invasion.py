@@ -32,9 +32,11 @@ def start():
 
         if decision == "1":
             if thought_complete == False:
+                print_func()
                 print "\"Marines!\" you say.  \"We are LEAVING!\""
                 dead("You and your team run headlong into a xenomorph ambush.")
             else:
+                print_func()
                 print """
                 You decide to get ready and leave.  It occurs to you that the
                 xenomorphs are probably preparing an ambush in the hallway
@@ -43,9 +45,10 @@ def start():
                 """
                 journey_1()
         elif decision == "2":
+            print_func()
             print insults[k]
         elif decision == "3":
-            thought_meter +=1
+            thought_meter += 1
             if thought_meter >= 3:
                 print "I have thought enough."
                 thought_complete = True
@@ -86,8 +89,7 @@ def journey_1():
 def journey_2():
     morale_2 = 0
     text = "wigio"
-    for i in range (0,25):
-        print "\n"
+    print_func()
     print """
     At the end of the hallway you come to a door.  On it is a jumble of 5 letters
     the text reads %s.  Above the text is an engraving of a muscular man with
@@ -146,10 +148,40 @@ def continue_game2():
         exit(0)
 
 def door():
-    print "This is where door will go"
-    print "Change example"
+    print_func()
+
+    num1 = 1
+    num2 = 2
+    num3 = 3
+    num4 = 4
+    num5 = 5
+    combo = [num1, num2, num3, num4, num5]
+    #combination lock
+    while combo != [1, 4, 2, 7, 9]:
+        print_func()
+        print combo, "\n"
+        print """
+        To increment the first number, press One
+        To increment the second number, press two
+        To increment the third number, press three
+        To increment the third number, press four
+        To increment the fifth number, press five
+        """
+        turn = int(raw_input("> "))
+
+        spot = turn - 1
+
+        if combo[spot] == 9:
+            combo[spot] = 0
+        else:
+            combo[spot] = combo[spot] + 1
+    print combo
+    print "Congratulations, you solved the lock!"
     exit(0)
 
+def print_func():
+    for i in range(0,25):
+        print "\n"
 
 
 def dead(why):

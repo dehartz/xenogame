@@ -50,11 +50,14 @@ def start():
         elif decision == "3":
             thought_meter += 1
             if thought_meter >= 3:
+                print_func()
                 print "I have thought enough."
                 thought_complete = True
             else:
+                print_func()
                 print "You think intensely about a plan of escape."
         else:
+            print_func()
             print "No comprendo homeslice."
 
 
@@ -73,12 +76,13 @@ def journey_1():
     while True:
         if "1" in answer:
             morale += 1
+            print_func()
             print "Sansa smiles at you, she looks reassured.\n"
 
             continue_game()
         elif "2" in answer:
             morale -= 1
-
+            print_func()
             print "Sansa looks at you for a half second longer, then looks down at her"
             print "feet and walks ahead."
             continue_game()
@@ -108,6 +112,7 @@ def journey_2():
     while True:
         if "1" in answer2:
             morale_2 -= 1
+            print_func()
             print """
             \"Xanarra! I don't give a damn who you are back at Federation One
             Out here you answer to me, and I don't EVER want to hear you talk
@@ -120,6 +125,7 @@ def journey_2():
 
         elif "2" in answer2:
             morale_2 += 1
+            print_func()
             print """
             \"Guys, I know everyone is tired.  I am too.  Let's try and work
             together to get out of here.  We need to be working together as a team\"

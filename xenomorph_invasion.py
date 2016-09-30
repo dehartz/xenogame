@@ -22,7 +22,6 @@ def start():
     members = ["Pvt.Williams","Sgt.Sansa","Admiral Xanarra"]
     insults = ["Just shut up Private.","Sgt, please shut up.", "Admiral Please remain quiet."]
     k = 0
-    j = k
 
     while True:
 
@@ -33,9 +32,11 @@ def start():
 
         if decision == "1":
             if thought_complete == False:
+                print_func()
                 print "\"Marines!\" you say.  \"We are LEAVING!\""
                 dead("You and your team run headlong into a xenomorph ambush.")
             else:
+                print_func()
                 print """
                 You decide to get ready and leave.  It occurs to you that the
                 xenomorphs are probably preparing an ambush in the hallway
@@ -44,15 +45,19 @@ def start():
                 """
                 journey_1()
         elif decision == "2":
+            print_func()
             print insults[k]
         elif decision == "3":
-            thought_meter +=1
+            thought_meter += 1
             if thought_meter >= 3:
+                print_func()
                 print "I have thought enough."
                 thought_complete = True
             else:
+                print_func()
                 print "You think intensely about a plan of escape."
         else:
+            print_func()
             print "No comprendo homeslice."
 
 
@@ -62,7 +67,7 @@ def journey_1():
     It worked! You hear the cries of pain and the gernade shrapnel rips through
     their chitinous exoskelton."""
     print "\nAlright Marines, we are LEAVING!"
-    print """\n\nYou and your team head down the hallway.  \"Hey\" Sgt.Sansa said, jogging up next to you.
+    print """\n\nYou and your team head down the hallway.  \"Hey\" Sgt.Sansa says, jogging up next to you.
     \ndo you think we're gonna make it out of here?"
     1. Yes, don't worry.  I'll think of something.
     2. Honestly? Don't hold your breath, We'll be dead inside the hour.
@@ -71,12 +76,13 @@ def journey_1():
     while True:
         if "1" in answer:
             morale += 1
+            print_func()
             print "Sansa smiles at you, she looks reassured.\n"
 
             continue_game()
         elif "2" in answer:
             morale -= 1
-
+            print_func()
             print "Sansa looks at you for a half second longer, then looks down at her"
             print "feet and walks ahead."
             continue_game()
@@ -87,8 +93,7 @@ def journey_1():
 def journey_2():
     morale_2 = 0
     text = "wigio"
-    for i in range (0,25):
-        print "\n"
+    print_func()
     print """
     At the end of the hallway you come to a door.  On it is a jumble of 5 letters
     the text reads %s.  Above the text is an engraving of a muscular man with
@@ -107,6 +112,7 @@ def journey_2():
     while True:
         if "1" in answer2:
             morale_2 -= 1
+            print_func()
             print """
             \"Xanarra! I don't give a damn who you are back at Federation One
             Out here you answer to me, and I don't EVER want to hear you talk
@@ -119,6 +125,7 @@ def journey_2():
 
         elif "2" in answer2:
             morale_2 += 1
+            print_func()
             print """
             \"Guys, I know everyone is tired.  I am too.  Let's try and work
             together to get out of here.  We need to be working as as a team\"
@@ -147,9 +154,40 @@ def continue_game2():
         exit(0)
 
 def door():
-    print "This is where door will go"
+    print_func()
+
+    num1 = 1
+    num2 = 2
+    num3 = 3
+    num4 = 4
+    num5 = 5
+    combo = [num1, num2, num3, num4, num5]
+    #combination lock
+    while combo != [1, 4, 2, 7, 9]:
+        print_func()
+        print combo, "\n"
+        print """
+        To increment the first number, press One
+        To increment the second number, press two
+        To increment the third number, press three
+        To increment the third number, press four
+        To increment the fifth number, press five
+        """
+        turn = int(raw_input("> "))
+
+        spot = turn - 1
+
+        if combo[spot] == 9:
+            combo[spot] = 0
+        else:
+            combo[spot] = combo[spot] + 1
+    print combo
+    print "Congratulations, you solved the lock!"
     exit(0)
 
+def print_func():
+    for i in range(0,25):
+        print "\n"
 
 
 def dead(why):
